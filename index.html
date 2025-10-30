@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAVYBAY</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<section class="intro">
+  <div class="visual-bg">
+    <div class="bgimg">
+      <img src="images/golfer-hits-fairway-shot-towards-club-house.png" alt="">
+    </div>
+    <div class="blur-circle"></div>
+    <div class="blur-circle small"></div>
+  </div>
+
+  <!-- 스플라인 3D -->
+  <div class="spline-container">
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.90/build/spline-viewer.js"></script>
+    <spline-viewer 
+      url="https://prod.spline.design/XImMkmz4ejwIub80/scene.splinecode"
+      style="background:transparent;"
+    ></spline-viewer>
+  </div>
+
+  <div class="intro-text">
+    <h1 class="glow-text">NAVYBAY</h1>
+  </div>
+
+  <div class="intro-sub">
+    <p class="sub">Discover the power of precision,<br>crafted for your perfect swing.</p>
+    <p>당신의 스윙을 완성하는 퍼포먼스,<br>네이비베이의 새로운 웨이브를 경험하세요.</p>
+  </div>
+
+  <nav class="menu">
+    <ul>
+      <li><a href="#">ABOUT</a></li>
+      <li><a href="#">PRODUCT</a></li>
+      <li><a href="#">VISION</a></li>
+      <li><a href="#">CONTACT</a></li>
+    </ul>
+  </nav>
+</section>
+
+<section class="sec2">
+    <div class="blur-circle"></div>
+    <div class="blur-circle small"></div>
+    <div class="box1">
+        <img src="images/sec2.png" alt="">
+    </div>
+  <div class="textbox">
+    <p>네이비베이의 누적 판매 수</p>
+  </div>
+</section>
+
+
+<section class="sec3">
+
+</section>
+
+
+<!-- 1) GSAP 먼저 로드 -->
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+<!-- 2) Lenis 로드 -->
+<script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/bundled/lenis.min.js"></script>
+
+<!-- 3) 우리 실행 코드 (gsap.registerPlugin + lenis 초기화 등) -->
+<script>
+  // GSAP 플러그인 등록
+  gsap.registerPlugin(ScrollTrigger);
+
+  // Lenis 스무스 스크롤 초기화
+  const lenis = new Lenis({
+    // 옵션은 필요하면 여기서 커스텀 가능
+    // smoothWheel: true,
+    // lerp: 0.1      // 부드러움 정도 (0~1 사이). 기본값도 충분히 부드러움
+  });
+
+  // Lenis가 스크롤을 관리하게 함
+  lenis.on('scroll', (e) => {
+    // console.log(e); // 디버깅 시만 열기
+  });
+
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+
+  requestAnimationFrame(raf);
+</script>
+
+
+<script>
+        gsap.to(box1, {
+            duration: 2,
+            x: 1000,
+            borderRadius: 100,
+            rotation: 360
+        });
+</script>
+
+<!-- 4) (선택) 너 추가 효과 넣는 js/main.js가 있다면 마지막에 불러 -->
+<script src="js/main.js"></script>
+
+</body>
+</html>

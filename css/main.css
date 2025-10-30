@@ -1,0 +1,105 @@
+@import url(font.css);
+@import url(reset.css);
+
+
+html { font-size: 10px;}
+body { overflow-x: hidden;}
+
+.intro {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background: #f4f4f4;
+    }
+.spline-container {
+  position: absolute;
+  top: 10%;
+  right: 50%;
+  width: 600px;
+  height: 600px;
+  
+  z-index: 100;
+}
+
+spline-viewer {
+  width: 300%;
+  height: 100%;
+  background: transparent;
+}
+.bgimg { position: absolute; left: 0%; top: 0; filter: grayscale(1)} 
+.blur-circle { width: 600px; height: 600px; border-radius: 50%; border: 10px solid #001aff;
+ background: radial-gradient(circle, rgba(0,102,255,0.2) 0%, rgba(255,255,255,0) 70%);
+filter: blur(100px);
+z-index: 101;
+left: 10% ;
+top: 0;
+position: absolute; 
+animation: float 8s ease-in-out infinite alternate;}
+ @keyframes float {
+      0% { transform: translate(0, 0); }
+      100% { transform: translate(30px, -40px); }
+    }
+
+
+
+   .blur-circle.small {
+      width: 300px;
+      height: 300px;
+      position: absolute;
+      top: 40%;
+      left: 70%;
+      background: radial-gradient(circle, rgba(0,102,255,0.25) 0%, rgba(255,255,255,0) 70%);
+    }
+.sec2 .blur-circle { width: 300px; height: 300px; border-radius: 50%; border: 10px solid #001aff;
+ background: radial-gradient(circle, rgba(0,102,255,0.2) 0%, rgba(255,255,255,0) 70%);
+filter: blur(100px);
+z-index: 101;
+left: 10% ;
+top: 30%;
+position: absolute; 
+animation: float 8s ease-in-out infinite alternate;}
+ @keyframes float {
+      0% { transform: translate(0, 0); }
+      100% { transform: translate(30px, -40px); }
+    }
+
+
+
+.sec2 .blur-circle.small {
+      width: 500px;
+      height: 300px;
+      position: absolute;
+      top: 20%;
+      left: 70%;
+      background: radial-gradient(circle, rgba(0,102,255,0.25) 0%, rgba(255,255,255,0) 70%);
+    }
+
+
+.intro-text h1{ font-size: 8vw; color: #223A5E; position: absolute;
+ bottom: 10%; left: 5%; }
+
+.intro-sub { position: absolute; font-size: 1vw; font-weight: 600; letter-spacing: -1px; 
+top: 10%; left: 5%; color: #223A5E;}
+
+.menu { position: absolute;right: 10%; top: 10%; }
+.menu ul { display: flex; gap: 1.7rem; }
+.menu ul li { list-style: none;   } 
+.menu ul li:hover {filter: blur(0.6px );}
+.menu ul li a {  font-size: 1.5rem; font-weight: 600; color: #223A5E;  ; }
+
+
+
+.sec2 { height: 100vh; background: #f4f4f4; position: relative;}
+.sec2 .textbox { position: absolute; left: 50%; top: 30%; transform: translateX(-50%);} 
+.sec2 .textbox p {font-size: 3vh; font-weight: 800;color: #223A5E; }
+.sec2 .box1 { position: absolute; top: 50%; transform: translateY(-50%);
+right: 10%;}
+.sec2 .box1 img{ width: 50vh; height: 50vh; object-fit: cover;}
+
+
+
+.sec3 { height: 100vh;}

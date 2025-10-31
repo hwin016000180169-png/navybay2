@@ -94,11 +94,11 @@ top: 10%; left: 5%; color: #223A5E;}
 
 
 .sec2 { height: 100vh; background: #f4f4f4; position: relative;}
-.sec2 .textbox { position: absolute; left: 50%; top: 30%; transform: translateX(-50%);} 
-.sec2 .textbox p {font-size: 3vh; font-weight: 800;color: #223A5E; }
+.sec2 .textbox { position: absolute; left: 50%; top: 20%; transform: translateX(-50%);} 
+.sec2 .textbox p {font-size: 2vw; font-weight: 800;color: #223A5E; }
 .sec2 .box1 { position: absolute; top: 50%; transform: translateY(-50%);
-right: 10%;}
-.sec2 .box1 img{ width: 50vh; height: 50vh; object-fit: cover;}
+right: 50%;}
+.sec2 .box1 img{ width: 20vw; height: 20vw; object-fit: cover;}
 
 
 
